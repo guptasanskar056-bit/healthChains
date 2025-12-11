@@ -11,11 +11,20 @@ const TransactionHistory = ({ account }) => {
   useEffect(() => {
     const fetchTransactions = async () => {
       setLoading(true);
+      setError(null);
       try {
         // TODO: Call apiService.getTransactions with account address if available
-        // TODO: Update transactions state
+        // TODO: Update transactions state 
+        const res = await apiService.getTransactions(account || null, 20);
+        let txList = Array.isArray(res.transactions) ? res.transactions : [];
+        if (window.latestConsentTx) {
+        txList = [window.latestConsentTx, ...txList];
+      }
+        setTransactions(txList);
       } catch (err) {
-        setError(err.message);
+        console.error("Transaction fetch error:", err);
+        setError(err.message || 'Failed to load transactions');
+        setTransactions([]);
       } finally {
         setLoading(false);
       }
@@ -31,7 +40,8 @@ const TransactionHistory = ({ account }) => {
 
   const formatDate = (timestamp) => {
     // TODO: Format the timestamp to a readable date
-    return timestamp;
+    if (!timestamp) return '';
+    return new Date(timestamp).toLocaleString();
   };
 
   if (loading) {
@@ -64,11 +74,22 @@ const TransactionHistory = ({ account }) => {
       {/* TODO: Display transactions list */}
       {/* Show: type, from, to, amount, currency, status, timestamp, blockchainTxHash */}
       <div className="transactions-list">
-        {/* Your implementation here */}
-        <div className="placeholder">
-          <p>Transaction list will be displayed here</p>
-          <p>Implement the transaction list rendering</p>
-        </div>
+        {/* Your implementation here */
+        transactions.length === 0 ? (
+          <p>No transactions found.</p>
+        ) : (
+          transactions.map((tx) => (
+            <div key={tx.id} className="transaction-card">
+              <h3>{tx.type}</h3>
+              <p><strong>From:</strong> {formatAddress(tx.from)}</p>
+              <p><strong>To:</strong> {formatAddress(tx.to)}</p>
+              <p><strong>Amount:</strong> {tx.amount} {tx.currency}</p>
+              <p><strong>Status:</strong> {tx.status}</p>
+              <p><strong>Date:</strong> {formatDate(tx.timestamp)}</p>
+              <p><strong>Tx Hash:</strong> {tx.blockchainTxHash}</p>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

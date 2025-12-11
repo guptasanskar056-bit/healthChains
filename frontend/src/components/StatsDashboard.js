@@ -11,11 +11,14 @@ const StatsDashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       setLoading(true);
+      setError(null);
       try {
         // TODO: Call apiService.getStats()
         // TODO: Update stats state
+        const res = await apiService.getStats();
+        setStats(res);
       } catch (err) {
-        setError(err.message);
+        setError(err.message || 'Failed to load statistics');
       } finally {
         setLoading(false);
       }
@@ -48,9 +51,34 @@ const StatsDashboard = () => {
       {/* Show: totalPatients, totalRecords, totalConsents, activeConsents, pendingConsents, totalTransactions */}
       <div className="stats-grid">
         {/* Your implementation here */}
-        <div className="placeholder">
-          <p>Statistics will be displayed here</p>
-          <p>Implement the statistics dashboard</p>
+        <div className="stat-card">
+          <h3>Total Patients</h3>
+          <p>{stats.totalPatients}</p>
+        </div>
+
+        <div className="stat-card">
+          <h3>Total Records</h3>
+          <p>{stats.totalRecords}</p>
+        </div>
+
+        <div className="stat-card">
+          <h3>Total Consents</h3>
+          <p>{stats.totalConsents}</p>
+        </div>
+
+        <div className="stat-card">
+          <h3>Active Consents</h3>
+          <p>{stats.activeConsents}</p>
+        </div>
+
+        <div className="stat-card">
+          <h3>Pending Consents</h3>
+          <p>{stats.pendingConsents}</p>
+        </div>
+
+        <div className="stat-card">
+          <h3>Total Transactions</h3>
+          <p>{stats.totalTransactions}</p>
         </div>
       </div>
     </div>
